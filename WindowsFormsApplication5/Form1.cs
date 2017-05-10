@@ -21,7 +21,6 @@ namespace WindowsFormsApplication5
 
         private void Bcalcular_Click(object sender, EventArgs e)
         {
-            
             int  a = Int32.Parse(Tboperador1.Text);
             int  b = Int32.Parse(Tboperador2.Text);
             Calculo calculo = new Calculo(a,b);

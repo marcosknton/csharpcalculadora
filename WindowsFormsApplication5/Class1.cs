@@ -8,13 +8,37 @@ namespace WindowsFormsApplication5
 {
    public class Calculo
     {
-        public int a { get; set; }
-        public int b { get; set; }
+        private int a;
+        private int b;
 
+
+       /*
+        public int A
+        {
+            get { return a;}
+            set { a = value; }
+        }
+        
+        */
+
+        public int getA()
+        {
+            return a;
+        }
+
+        public int getB()
+        {
+            return b;
+        }
+        
         public Calculo(int a, int b)
         {
             this.a = a;
             this.b = b;
+        }
+        public Calculo()
+        {
+
         }
 
         public int sumar()

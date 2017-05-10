@@ -11,14 +11,31 @@ namespace WindowsFormsApplication5.Tests
     [TestClass()]
     public class CalculoTests
     {
-        [TestMethod()]
-        public void sumarTest()
-        {
-           Calculo calculo = new Calculo(10, 3);
-            Assert.IsFalse(calculo.b < calculo.a,"la segunda variable no puede ser menor que la primera ");
-            Assert.IsNotNull(calculo.a, "la variable no puede ser nula");
+        Calculo calculo = new Calculo(5,8);
 
+       
+        [TestMethod()]
+        public void aMayorB()
+        {
+            Assert.IsTrue(calculo.getA() > calculo.getB(), "la primera variable no pueder ser menor que la segunda");
+           
+        }
+
+        [TestMethod()]
+        public void aMayor0()
+        {
+            Assert.IsTrue(calculo.getA() > 0,"la primera variable no puede ser negativa");
+           
+        }
+
+        [TestMethod()]
+        public void bMayor0()
+        {
+            Assert.IsTrue(calculo.getB() > 0, "la segunda variable no puede ser negativa");
 
         }
+
+
+        
     }
 }
